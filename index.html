@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Мой сайт</title>
+        <style>
+      .photo {
+      width: 150px;
+      height: 150px;
+      margin: 10px;
+}
+
+    </style>
+  </head>
+  <body>
+    <div class="profile">
+      <img
+        src="https://i.pinimg.com/736x/f6/3d/ab/f63dab3fa72792bbd82dbeee94935a13.jpg"
+        class="photo"
+      />
+      <div>
+        <h1 class="surname">Дмитроченкова</h1>
+        <h1 class="name">Юлия</h1>
+        <p class="info">Студент</p>
+      </div>
+    </div>
+
+    <div class="section">
+      <h2>Навыки</h2>
+      <ul>
+        <li>обучение</li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <h2>Изменить фамилию</h2>
+      <input type="text" id="new_surname" placeholder="Введите новую фамилию" />
+      <button onclick="change_surname()">Изменить</button>
+    </div>
+
+    <script>
+      function change_surname() {
+          const newLastName = document.getElementById('new_surname').value;
+          if (newLastName) {
+              document.querySelector('.surname').textContent = newLastName;
+          }
+      }
+    </script>
+  </body>
+</html>
